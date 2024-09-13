@@ -5,7 +5,7 @@ This project demonstrates a Flask-based web application for image outpainting us
 ## Project Structure
 
 ``` bash
-U2NetImageOutpainting/
+U2NetImageInpainting/
 ├── flask_uploads/                  # Stores uploaded images, generated masks, and final output images
 │   ├── created_mask/               # Generated masks from the U2Net model
 │   ├── images/                     # Uploaded images by users
@@ -26,6 +26,8 @@ U2NetImageOutpainting/
 ├── Image_bwmask_dataset.zip        # Dataset used for training U2Net (contains images and black/white masks)
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # Project documentation (this file)
+
+Note: u2net_3.weights.h5 and Image_bwmask_dataset.zip were too large to git push!!!
 ```
 
 ## Features
