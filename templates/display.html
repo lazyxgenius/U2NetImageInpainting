@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inpainting Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .image-container div {
+            text-align: center;
+        }
+        .image-container img {
+            width: 300px; /* You can adjust the width to your preference */
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .image-container h2 {
+            margin-top: 10px;
+            color: #555;
+        }
+        footer {
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Original Image, Mask, and Outpainted Image</h1>
+    <div class="image-container">
+        <div>
+            <h2>Original Image</h2>
+            <img src="{{ url_for('uploaded_file', filename=original_image) }}" alt="Original Image">
+        </div>
+        <div>
+            <h2>Mask Image</h2>
+            <img src="{{ url_for('mask_file', filename=mask_image) }}" alt="Mask Image">
+        </div>
+        <div>
+            <h2>Outpainted Image</h2>
+            <img src="{{ url_for('output_file', filename=output_image) }}" alt="Outpainted Image">
+        </div>
+    </div>
+    <footer>
+        Image outpainting results powered by U2Net and Replicate API.
+    </footer>
+</body>
+</html>
